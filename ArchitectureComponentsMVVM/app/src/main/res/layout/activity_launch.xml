@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LaunchActivity">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM\n(With RoomDB)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_room"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM\n(With Retrofit)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_pagination"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM\n(With Retrofit Room)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_retro_room"/>
+
+</LinearLayout>
