@@ -22,4 +22,11 @@
         android:textSize="25sp"
         android:id="@+id/mvvm_pagination"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM\n(With Retrofit Room)"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_retro_room"/>
 </LinearLayout>
