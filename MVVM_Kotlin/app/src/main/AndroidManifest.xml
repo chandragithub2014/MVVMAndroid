@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Kotlin_Retrofit_Room.Views.RetroRoomActivity"></activity>
+        <activity android:name=".Kotlin_Login.Views.LoginActivity"></activity>
+
     </application>
 
 </manifest>

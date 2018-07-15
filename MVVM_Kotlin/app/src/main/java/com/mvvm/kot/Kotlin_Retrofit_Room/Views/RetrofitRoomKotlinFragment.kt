@@ -31,6 +31,7 @@ lateinit var progressDialog: ProgressDialog
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         retroFitView = inflater.inflate(R.layout.fragment_retro_fit_post,container,false)
         initViews(retroFitView)
+        progressDialog = ProgressDialog.show(activity,"Progress","Loading...",false)
         setAdapter()
         /*postListViewModel.getAllPosts().observe(this,object :Observer<List<ResultModel>>{
             override fun onChanged(t: List<ResultModel>?) {
@@ -39,7 +40,7 @@ lateinit var progressDialog: ProgressDialog
 
         })
 */
-        progressDialog = ProgressDialog.show(activity,"Progress","Loading...",false)
+
         postListViewModel.fetchPostsFromWebSevice().observe(this,object :Observer<List<ResultModel>>{
             override fun onChanged(t: List<ResultModel>?) {
                  postListViewModel.insertAllPosts(t)
@@ -74,6 +75,9 @@ lateinit var progressDialog: ProgressDialog
     }
      lateinit var userPostAdapter:PostsAdapter
     private  fun setAdapter(){
+        if(progressDialog!=null && progressDialog.isShowing){
+            progressDialog.dismiss()
+        }
          userPostAdapter = PostsAdapter()
         retrofitRecyclerView.layoutManager = LinearLayoutManager(activity, LinearLayout.VERTICAL, false)
         retrofitRecyclerView.adapter = userPostAdapter
