@@ -7,7 +7,7 @@ import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 import com.mvvm.kot.ViewModels.User
 
-@Database(entities = arrayOf(User::class), version = 1)
+@Database(entities = arrayOf(User::class), version = 1,exportSchema = false)
 abstract  class UserRoomDataBase: RoomDatabase(){
     abstract fun userDao(): UserDao
 

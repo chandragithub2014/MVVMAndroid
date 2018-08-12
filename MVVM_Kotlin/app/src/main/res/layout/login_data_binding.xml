@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data class="LoginFragmentBinding">
+        <variable
+            name="model"
+            type="com.mvvm.kot.Kotlin_login_dataBinding.Model.LoginInfo" />
+
+        <variable
+            name="viewModel"
+            type="com.mvvm.kot.Kotlin_login_dataBinding.ViewModels.LoginViewModel"/>
+
+     <variable name="handlers" type="com.mvvm.kot.Kotlin_login_dataBinding.Listeners.MyListener"/>
+
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    >
+    <EditText
+        android:id="@+id/editTextemailID"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:hint="Email"
+        android:text="@={model.userName}"
+        />
+
+    <EditText
+        android:id="@+id/editTextpassID"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/editTextemailID"
+        android:hint="Password"
+        android:inputType="textWebPassword"
+        android:text="@={model.userPassWord}"
+        />
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_below="@+id/editTextpassID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="Login"
+        />
+
+
+</RelativeLayout>
+</layout>

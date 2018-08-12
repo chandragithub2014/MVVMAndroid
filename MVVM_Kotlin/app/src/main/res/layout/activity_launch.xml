@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,6 +17,7 @@
         android:text="MVVM\n(With RoomDB)"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
+        android:textAllCaps="false"
         android:id="@+id/mvvm_room"/>
 
     <Button
@@ -20,6 +26,7 @@
         android:text="MVVM\n(With Retrofit)"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
+        android:textAllCaps="false"
         android:id="@+id/mvvm_pagination"/>
 
     <Button
@@ -28,13 +35,50 @@
         android:text="MVVM\n(With Retrofit Room)"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
+        android:textAllCaps="false"
         android:id="@+id/mvvm_retro_room"/>
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="MVVM Login"
+        android:textAllCaps="false"
+    android:textColor="@color/colorPrimary"
+    android:textSize="25sp"
+    android:id="@+id/mvvm_basic_login"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MVVM Login)"
+        android:text="MVVM_Login(DataBinding)"
+        android:textAllCaps="false"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
-        android:id="@+id/mvvm_basic_login"/>
+        android:id="@+id/login_data_binding"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM RecyclerView(DataBinding)"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_rv"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM Simple RecyclerView(DataBinding)"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_rv_simple"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MVVM Tabs"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:id="@+id/mvvm_tabs"/>
 </LinearLayout>
+</ScrollView>

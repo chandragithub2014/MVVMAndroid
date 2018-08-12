@@ -1,6 +1,7 @@
 package com.mvvm.kot.Adapter
 
 import android.content.Context
+import android.os.Trace
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -15,15 +16,37 @@ import kotlinx.android.synthetic.main.fragment_user_list.view.*
  public class UserListAdapter(): RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
 
      var items:List<User>?=null
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+
+     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+         return ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.adapter_user_item, parent, false))
+     }
+
+     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+         try {
+             holder?.userName_holder?.text = items!!.get(position).userName
+             holder?.userOccupation_holder?.text = items!!.get(position).userOccupation
+         }catch (e:Exception){
+             e.printStackTrace()
+         }finally {
+             Trace.endSection();
+         }
+     }
+  /*  override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.adapter_user_item, parent, false))
     }
 
 
     override fun onBindViewHolder(holder:ViewHolder?, position: Int) {
-        holder?.userName_holder?.text = items!!.get(position).userName
-        holder?.userOccupation_holder?.text = items!!.get(position).userOccupation
-    }
+       // Trace.beginSection("Adapter's onBindViewHolder");
+        try {
+            holder?.userName_holder?.text = items!!.get(position).userName
+            holder?.userOccupation_holder?.text = items!!.get(position).userOccupation
+        }catch (e:Exception){
+            e.printStackTrace()
+        }finally {
+            Trace.endSection();
+        }
+    }*/
 
     override fun getItemCount(): Int {
         if(items!=null) {

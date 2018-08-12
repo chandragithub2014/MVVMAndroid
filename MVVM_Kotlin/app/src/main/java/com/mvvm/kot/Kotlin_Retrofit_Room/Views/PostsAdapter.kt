@@ -10,17 +10,21 @@ import com.mvvm.kot.R
 
 public class PostsAdapter(): RecyclerView.Adapter<PostsAdapter.UserPostHolder>() {
      var  postList: List<ResultModel>?=null
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): UserPostHolder {
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserPostHolder {
         return UserPostHolder(LayoutInflater.from(parent?.context).inflate(R.layout.adapter_retro_post_item,parent,false))
     }
 
-    override fun onBindViewHolder(holder: UserPostHolder?, position: Int) {
+    override fun onBindViewHolder(holder: UserPostHolder, position: Int) {
+        holder!!.retroId?.text=postList!!.get(position).getId().toString()
+        holder!!.retroTitle?.text=postList!!.get(position).getTitle()
+        holder!!.retroBody.text=postList!!.get(position).getBody()
+    }
+ /*   override fun onBindViewHolder(holder: UserPostHolder?, position: Int) {
         holder!!.retroId?.text=postList!!.get(position).getId().toString()
         holder!!.retroTitle?.text=postList!!.get(position).getTitle()
         holder!!.retroBody.text=postList!!.get(position).getBody()
 
-    }
+    }*/
 
     override fun getItemCount(): Int {
         if(postList!=null) {

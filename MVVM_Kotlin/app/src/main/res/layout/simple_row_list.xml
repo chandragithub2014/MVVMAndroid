@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data class="SimpleListAdapterBinding" >
+        <variable
+            name="model"
+            type="com.mvvm.kot.Kotlin_Simple_List_DataBinding.ViewModels.SimpleListDTO"></variable>
+    </data>
+<LinearLayout
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@drawable/ripple_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src ="@{model.iconId}"
+        android:id="@+id/simple_type1_image"
+        android:padding="8dp"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{model.title}"
+        android:id="@+id/simple_type1_title"
+        android:padding="8dp"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>
+</layout>

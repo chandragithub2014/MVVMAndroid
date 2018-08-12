@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Kotlin_Retrofit.Views.RetroKotlinActivity" />
         <activity android:name=".LaunchActivity">
             <intent-filter>
@@ -20,9 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Kotlin_Retrofit_Room.Views.RetroRoomActivity"></activity>
-        <activity android:name=".Kotlin_Login.Views.LoginActivity"></activity>
-
+        <activity android:name=".Kotlin_Retrofit_Room.Views.RetroRoomActivity" />
+        <activity android:name=".Kotlin_Login.Views.LoginActivity" />
+        <activity android:name=".Kotlin_login_dataBinding.Views.LoginDataBindingActivity" />
+        <activity android:name=".Kotlin_Retrofit_Room_Data_Binding.Views.RetroRoomDataBindedActivity" />
+        <activity android:name=".Kotlin_Simple_List_DataBinding.Views.SimpleListActivity" />
+        <activity android:name=".Kotlin_tabs.TabActivity"></activity>
     </application>
 
 </manifest>
